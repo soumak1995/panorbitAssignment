@@ -4,7 +4,7 @@ function Gallery() {
     return (
         <div>
             <div className="posts">
-            <h1>Coming Soon</h1>
+            <h1 className="post__label">Coming Soon</h1>
             </div>
         </div>
     )
