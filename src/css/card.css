@@ -14,7 +14,7 @@
  height: 30px;
  border-bottom: solid lightgrey;
  text-align: center;
- font-size: 30px;
+ font-size: 20px;
  padding: 20px;
  background-color: lightgrey;
  border-top-right-radius:1rem;
@@ -33,4 +33,7 @@
     float: 0.1em;
     position: absolute;
     height: 5px;
+}
+.card__header> h5{
+    margin-top: 10px;
 }
