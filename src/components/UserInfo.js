@@ -8,37 +8,38 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(20),
     },
   }));
-function UserInfo() {
+function UserInfo({user}) {
+    console.log(user)
     const classes = useStyles();
     return (
         <>
         <div className="container1">
             
          <div className="UserInfo">
-               <Avatar alt="Remy Sharp"  className={classes.large} />
-              <h4 >Soumak Maji</h4>
+               <Avatar src={user?.profilepicture} alt={user?.name}  className={classes.large} />
+            <p className="UserInfo__name">{user?.name}</p>
             <section className="UserInfo__Section">
          
           
-             < p><span className="UserInfo__lable">Username :</span>Bret</p>  
+          < p><span className="UserInfo__lable">Username :</span>{user?.username}</p>  
   
-            <p><span className="UserInfo__lable">e-mail :</span> soumakamji@gmail.com</p> 
+            <p><span className="UserInfo__lable">e-mail :</span> {user?.email}</p> 
               
-           <p> <span className="UserInfo__lable">Phone :</span>9789668756</p>
+               <p> <span className="UserInfo__lable">Phone :</span>{user?.phone}</p>
            
-           <p> <span className="UserInfo__lable">Website :</span>ghjgjhkjhkj.com</p>
+              <p> <span className="UserInfo__lable">Website :</span>{user?.website}</p>
                
                 </section> 
             
                </div>
                
                 <div className="company__info">
-                    <p className="company__info_header">Company</p>
-                    < p><span className="UserInfo__lable">Name :</span>Romaguer-Crona</p>  
+               <p className="company__info_header">Company</p>
+             < p><span className="UserInfo__lable">Name :</span>{user?.company?.name}</p>  
   
-                    <p><span className="UserInfo__lable">catchphrase :</span> Multi-layered <br/> Client-server neural</p> 
+             <p><span className="UserInfo__lable">catchphrase :</span> {user?.company?.catchPhrase}</p> 
     
-                    <p> <span className="UserInfo__lable">bs :</span>harness real-time e-markets</p>
+              <p> <span className="UserInfo__lable">bs :</span>{user?.company?.bs}</p>
 
            </div>
         </div>

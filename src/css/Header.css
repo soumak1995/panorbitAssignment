@@ -10,10 +10,8 @@
    align-items: center;
 }
 .Header__profInfo>.MuiSvgIcon-root{
-    flex:0.8;
 }
 .Header__profName{
-    flex:0.2;
     margin-left: 5px;
 }
 .Header__title{

@@ -47,9 +47,10 @@ p{
   margin-top: 5px;
   margin-left: 100px;
   margin-bottom: 15px;
+  width:200px;
 }
 
-div>h4{
+.UserInfo__name{
     margin-top: 15px;
 }
 .company__info_header{

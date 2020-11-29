@@ -3,6 +3,10 @@
     align-items: center;
     border-bottom: 1px solid lightgray;
 }
+.UserList__link{
+    text-decoration: none;
+    color:black
+}
 .UserList:hover{
     background-color: lightgrey;
 }

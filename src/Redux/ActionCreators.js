@@ -22,3 +22,8 @@ export const addData = (data) => ({
     type: ActionTypes.ADD_DATA,
     payload: data
 });
+
+export const selectedData=(user)=>({
+    type:ActionTypes.SELECTED_DATA,
+    payload:user
+})

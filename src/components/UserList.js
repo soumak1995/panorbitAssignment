@@ -1,12 +1,18 @@
 import React from 'react'
 import Avatar from '@material-ui/core/Avatar';
 import '../css/UserList.css'
-function UserList() {
+import {Link} from 'react-router-dom'
+function UserList({profilepicture,username,id}) {
     return (
-        <div className="UserList">
-            <Avatar className="UserList__avatar"/>
-             <h6 className="UserList__info">Name Of the</h6>
-        </div>
+        <>
+         <Link to={`/Profile/${id}`} className="UserList__link">
+         <div className="UserList">
+         <Avatar className="UserList__avatar" src={profilepicture} alt={username}/>
+            <h6 className="UserList__info">{username}</h6>
+         </div>
+         </Link>
+        </>    
+       
         
     )
 }

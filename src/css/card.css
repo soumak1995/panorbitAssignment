@@ -9,12 +9,16 @@
     border-radius: 1rem;
 }
 .card__header{
-flex:0.1;
+  flex:0.1;
  color: gray;
  height: 30px;
- border-bottom: solid gray;
+ border-bottom: solid lightgrey;
  text-align: center;
+ font-size: 30px;
  padding: 20px;
+ background-color: lightgrey;
+ border-top-right-radius:1rem;
+ border-top-left-radius:1rem;
 }
 .card__list__container{
     flex:0.8;

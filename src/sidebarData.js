@@ -1,19 +1,14 @@
 export const SidebarData=[
     {
-        title:'Profile',
-        cName:'nav-item',
-        path:'Profile'   
-    },
-    {
         title:'Posts',
         cName:'nav-item',
-        path:'Posts' 
+        path:'/Posts' 
         
     },
     {
         title:'Gallery',
         cName:'nav-item',
-        path:'Gallery' 
+        path:'/Gallery' 
         
     }
 
