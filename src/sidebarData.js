@@ -15,12 +15,7 @@ export const SidebarData=[
         cName:'nav-item',
         path:'Gallery' 
         
-    },
-    {
-        title:'ToDo',
-        cName:'nav-item',
-        path:'ToDo'  
-        
     }
+
 ]
   

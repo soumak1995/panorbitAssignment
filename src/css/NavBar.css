@@ -9,6 +9,7 @@
 .nav-item{
        color: gray;
        margin-top: 10px;
+     
 }
 .nav-item > a{
     color: #99A3A4;
@@ -17,18 +18,18 @@
 .nav-item > span{
     cursor: pointer;
     color: grey;
-    border: solid lightgray;
-
 }
 .nav-item :hover{
     color: white;
 }
 .nav-item > hr{
     margin-top: 10px;
-    width:120px
+    width:120px;
+    color:lightgray
 }
 ul.li.a:after{
     content: "";
     position: absolute;
     right: -5;
+    background-color: white;
 }

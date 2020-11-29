@@ -11,10 +11,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-       <ProfilePage/>
-      <Switch>
-  
-      </Switch>
+        <ProfilePage/>
       </BrowserRouter>
    
     </div>

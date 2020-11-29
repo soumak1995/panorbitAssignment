@@ -14,6 +14,11 @@ function NavBar() {
                         <hr/>
                     </li>
                 ))}
+                <li className="nav-item">
+                <Link  to="/ToDo">
+                   <span>ToDo</span>
+                </Link>
+                </li>
             </ul>
             
         </nav>

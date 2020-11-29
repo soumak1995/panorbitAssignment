@@ -1,0 +1,15 @@
+.UserListModal__container{
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.UserListModal__container__info{
+    margin-left:10px;
+    margin:5px;
+   
+}
+.UserListModal__container>.MuiAvatar-root{
+    margin:5px;
+}

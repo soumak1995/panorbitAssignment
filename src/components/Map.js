@@ -12,6 +12,11 @@ function Maps() {
                 attribution='&copy;<a href="http://osm.org/copyright">OpenstreetMap<a/>contributors'
                 />
             </LeafletMap>
+            <div className="map__cord">
+                <p className="map__cord__para"><small className="map__cord__label">Lat :</small>-37.3159</p>
+                <p className="map__cord__para"><small className="map__cord__label">Long :</small>-37.3159</p>
+            </div>
+            
         </div>
     )
 }

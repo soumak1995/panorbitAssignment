@@ -10,4 +10,16 @@
 .map > .leaflet-container{
     height: 100%; 
     border-radius: 20px;  
+    z-index: 1;
+}
+.map__cord{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.map__cord__label{
+   color:lightgray
+
+}
+.map__cord__para{
+    margin: 10px;
 }
