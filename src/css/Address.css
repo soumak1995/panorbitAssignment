@@ -1,0 +1,22 @@
+.Address{
+    display: flex;
+    border-left: 1px solid lightgray;
+    flex-direction: column;
+}
+.Address__info__span {
+    width: 100px;
+    clear: left;
+    float: left;
+    text-align: right;
+    padding-right: 5px;
+    color: lightgray;
+    font-weight: 400;
+  }
+  .Address__info{
+      margin: 20px;
+
+  }
+  .Address__map{
+      max-width:300px;
+      margin-left: 30px;
+  }
