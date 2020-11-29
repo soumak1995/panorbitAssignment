@@ -71,6 +71,7 @@
     border-color: border-box rgb(237, 90, 107);
     color: #fff;
     cursor: pointer;
+    outline: none;
   }
   .Modal__layout__article{
       margin-top: 4px;

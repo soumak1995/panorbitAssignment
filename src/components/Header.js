@@ -13,12 +13,10 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(10),
     },
   }));
-function Header({users}) {
+function Header({user,users}) {
     const classes = useStyles();
     let location = useLocation();
-    const {id}=useParams();
     const History=useHistory();
-   const user= users?.filter((person) => person.id === parseInt(id,10))[0]
     const [modalIsOpen,setModalIsOpen]=useState(false);
     const closemodal=()=>{
         setModalIsOpen(false)

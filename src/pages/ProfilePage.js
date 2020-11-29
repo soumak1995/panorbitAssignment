@@ -37,7 +37,7 @@ function ProfilePage(props) {
                             <NavBar selectedData={props.selectedData}/>
                         </div>
                         <div className="container__header">
-                                  <Header users={props?.data?.users}/>
+                                  <Header user={props.selectedData} users={props?.data?.users}/>
                                  <ProfileBody users={props?.data?.users}/>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ function ProfilePage(props) {
                          <NavBar  selectedData={props.selectedData}/>
                      </div>
                      <div className="container__header">
-                                <Header/>
+                     <Header user={props.selectedData} users={props?.data?.users}/>
                                 <Posts/>
                     </div>
                     </div>
@@ -60,7 +60,7 @@ function ProfilePage(props) {
                          <NavBar  selectedData={props.selectedData}/>
                      </div>
                      <div className="container__header">
-                                <Header/>
+                     <Header user={props.selectedData} users={props?.data?.users}/>
                                 <Gallery/>
                     </div>
                     </div>
@@ -71,8 +71,8 @@ function ProfilePage(props) {
                                 <NavBar  selectedData={props.selectedData}/>
                             </div>
                             <div className="container__header">
-                                        <Header/>
-                                        <Posts/>
+                                    <Header user={props.selectedData} users={props?.data?.users}/>
+                                    <Posts/>
                             </div>
                             </div>
                 </Route>
