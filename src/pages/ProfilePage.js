@@ -25,7 +25,6 @@ function ProfilePage(props) {
     useEffect(()=>{
         props.fetchData()
     },[]);
-    console.log(props)
     return (
         <div >
           
@@ -37,7 +36,7 @@ function ProfilePage(props) {
                             <NavBar selectedData={props.selectedData}/>
                         </div>
                         <div className="container__header">
-                                  <Header user={props.selectedData} users={props?.data?.users}/>
+                                  <Header/>
                                  <ProfileBody users={props?.data?.users}/>
                         </div>
                     </div>
@@ -49,7 +48,7 @@ function ProfilePage(props) {
                          <NavBar  selectedData={props.selectedData}/>
                      </div>
                      <div className="container__header">
-                     <Header user={props.selectedData} users={props?.data?.users}/>
+                     <Header />
                                 <Posts/>
                     </div>
                     </div>
@@ -60,7 +59,7 @@ function ProfilePage(props) {
                          <NavBar  selectedData={props.selectedData}/>
                      </div>
                      <div className="container__header">
-                     <Header user={props.selectedData} users={props?.data?.users}/>
+                     <Header />
                                 <Gallery/>
                     </div>
                     </div>
@@ -71,7 +70,7 @@ function ProfilePage(props) {
                                 <NavBar  selectedData={props.selectedData}/>
                             </div>
                             <div className="container__header">
-                                    <Header user={props.selectedData} users={props?.data?.users}/>
+                                    <Header/>
                                     <Posts/>
                             </div>
                             </div>

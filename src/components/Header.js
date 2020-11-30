@@ -5,7 +5,8 @@ import Modal from 'react-modal';
 import { makeStyles } from '@material-ui/core/styles';
 import UserList from './UserList'
 import UserListModal from '../components/UserListModal'
-import {useParams,useLocation,useHistory} from 'react-router-dom'
+import {useParams,useLocation,useHistory} from 'react-router-dom';
+import{connect} from 'react-redux';
 Modal.setAppElement('#root');
 const useStyles = makeStyles((theme) => ({
     large: {
@@ -13,7 +14,14 @@ const useStyles = makeStyles((theme) => ({
       height: theme.spacing(10),
     },
   }));
-function Header({user,users}) {
+ 
+  const mapStateToProps = state => {
+    return {
+      data: state.data,
+      selectedData:state.selectedData
+    }
+  }
+function Header({data,selectedData}) {
     const classes = useStyles();
     let location = useLocation();
     const History=useHistory();
@@ -24,15 +32,15 @@ function Header({user,users}) {
       const openModal=()=>{
         setModalIsOpen(true)
       }
-      const twoUser=users?.slice(0,2);
+      const twoUser=data?.users?.slice(0,2);
     return (
         <>
         <div className="Header">
 
            <h4 className="Header__title">{location.pathname}</h4>
             <div className="Header__profInfo" onClick={openModal}>
-            <Avatar  src={user?.profilepicture} alt={user?.name}/>
-          <small className="Header__profName">{user?.name}</small>
+            <Avatar  src={selectedData?.profilepicture} alt={selectedData?.name}/>
+          <small className="Header__profName">{selectedData?.name}</small>
             </div>
             
         </div>
@@ -42,21 +50,23 @@ function Header({user,users}) {
           className="Modal"
              overlayClassName="Overlay">
                     <section className="Modal__layout">
-                        <Avatar src={user?.profilepicture} alt={user?.name}  className={classes.large} />
+                        <Avatar src={selectedData?.profilepicture} alt={selectedData?.name}  className={classes.large} />
                         <article className="Modal__layout__article">
-                                <p>{user?.name}</p>
-                                 <p>{user?.email}</p>
+                                <p>{selectedData?.name}</p>
+                                 <p>{selectedData?.email}</p>
                         </article>
                         
                     </section>
                     
                     {
-                        twoUser?.map(user=>
+                        twoUser?.map((user,index)=>
                             <section className="Modal__layout">
                                 <UserListModal
-                            profilepicture={user?. profilepicture}
-                            username={user?.name}
-                            id={user?.id}/>
+                                  key={index}
+                                  profilepicture={user?. profilepicture}
+                                  username={user?.name}
+                                  id={user?.id}
+                                  user={user}/>
                              </section>)
                     }
                        
@@ -67,4 +77,4 @@ function Header({user,users}) {
     )
 }
 
-export default Header
+export default connect(mapStateToProps)(Header)

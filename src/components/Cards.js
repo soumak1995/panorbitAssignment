@@ -12,7 +12,7 @@ function Cards({users}) {
            <div className="card__list__container">
                {users?.map((m,index)=><UserList key={index} 
                profilepicture={m.profilepicture} 
-               username={m.username}
+               username={m.name}
                id={m.id}/>)}
            </div>
            <div className="card__footer">

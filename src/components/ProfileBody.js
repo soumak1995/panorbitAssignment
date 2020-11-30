@@ -9,7 +9,12 @@ import{connect} from 'react-redux'
     addSelectedData: (user) =>  dispatch(selectedData(user))
     
   });
-function ProfileBody({users,addSelectedData}) {
+  const mapStateToProps = state => {
+    return {
+      selectedData:state.selectedData
+    }
+  }
+function ProfileBody({users,addSelectedData,selectedData}) {
     const {id}=useParams();
    const user= users?.filter((person) => person.id === parseInt(id,10))[0]
     useEffect(() => {
@@ -17,11 +22,11 @@ function ProfileBody({users,addSelectedData}) {
     }, [])
     return (
         <div className="ProfileBody">
-            <UserInfo user={user}/>
-            <Address user={user}/>
+            <UserInfo user={selectedData}/>
+            <Address user={selectedData}/>
         </div>
     )
 }
 
-export default connect(null,mapDispatchToProps)(ProfileBody);
+export default connect(mapStateToProps,mapDispatchToProps)(ProfileBody);
 
