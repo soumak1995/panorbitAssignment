@@ -1,0 +1,35 @@
+.navbar{
+     display: flex;
+     background: linear-gradient(#1356C4 ,#8645DB );
+     width: 200px;
+     height: 100vh;
+     border-radius: 1rem;
+     align-items: center;
+}
+.nav-item{
+       color: gray;
+       margin-top: 10px;
+     
+}
+.nav-item > a{
+    color: #99A3A4;
+    text-decoration: none;
+}
+.nav-item > span{
+    cursor: pointer;
+    color: grey;
+}
+.nav-item :hover{
+    color: white;
+}
+.nav-item > hr{
+    margin-top: 10px;
+    width:120px;
+    color:lightgray
+}
+ul.li.a:after{
+    content: "";
+    position: absolute;
+    right: -5;
+    background-color: white;
+}

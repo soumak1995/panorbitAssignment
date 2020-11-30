@@ -1,0 +1,39 @@
+.card{
+   display: flex;
+   flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width:400px;
+    height:400px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+.card__header{
+  flex:0.1;
+ color: gray;
+ height: 30px;
+ border-bottom: solid lightgrey;
+ text-align: center;
+ font-size: 20px;
+ padding: 20px;
+ background-color: lightgrey;
+ border-top-right-radius:1rem;
+ border-top-left-radius:1rem;
+}
+.card__list__container{
+    flex:0.8;
+    padding: 20px;
+    position: relative;
+
+    
+    overflow-y: scroll;
+
+}
+.card__footer{
+    float: 0.1em;
+    position: absolute;
+    height: 5px;
+}
+.card__header> h5{
+    margin-top: 10px;
+}

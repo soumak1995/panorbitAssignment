@@ -1,0 +1,19 @@
+.UserList{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+}
+.UserList__link{
+    text-decoration: none;
+    color:black
+}
+.UserList:hover{
+    background-color: lightgrey;
+}
+.UserList__info{
+    margin-left:10px;
+    margin:5px;
+}
+.UserList>.MuiAvatar-root{
+    margin:5px;
+}

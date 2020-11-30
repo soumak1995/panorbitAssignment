@@ -1,0 +1,85 @@
+.Header{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom:  1px solid lightgray;
+    justify-content: space-between;
+}
+.Header__profInfo{
+   display: flex;
+   align-items: center;
+}
+.Header__profInfo>.MuiSvgIcon-root{
+}
+.Header__profName{
+    margin-left: 5px;
+}
+.Header__title{
+    margin-left: 5px;
+}
+.modal-wrapper{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+  .Overlay{
+    display: flex;
+    flex-direction: row-reverse;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 100;
+ 
+  }
+  .Modal{
+    position: absolute;
+    margin-top: 40px;
+    margin-right: 50px;
+    height: 300px;
+    min-height: 200px;
+    width:200px ;
+    overflow-y: auto;
+    background-color: white;
+    box-shadow: 0 0 20px 7px rgba(0,0,0,0.2);
+    z-index: 103;
+    padding: 20px;
+    text-align: center;
+    outline:none;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .Modal__layout{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid lightgray;
+      
+  }
+  button{
+    background: rgb(237, 90, 107);
+    border-radius: 2rem;
+    width: 120px;
+    height: 40px;
+    border: 1px solid;
+    font-weight: bolder;
+    margin-top: 20px;
+    border-color: border-box rgb(237, 90, 107);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+  .Modal__layout__article{
+      margin-top: 4px;
+      margin-bottom: 5px;
+  }
+  .Modal__layout__withoutBorder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

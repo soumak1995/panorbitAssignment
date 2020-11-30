@@ -1,0 +1,33 @@
+
+.dashboard__wave{
+    width:85%;
+    height: 200px;
+    position:relative;
+    background: linear-gradient(70deg,#754BB8 ,#393DF6);
+    display: flex;
+    padding: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard__waveimg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+}
+.dashboard__waveimg_cover{
+    position: absolute;
+    top:30%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.dashboard__card{
+    position: absolute;
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}

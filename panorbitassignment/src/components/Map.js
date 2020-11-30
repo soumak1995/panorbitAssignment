@@ -4,17 +4,11 @@ import {Map as LeafletMap,TileLayer} from "react-leaflet"
 function Maps({geo}) {
     const [mapCenter,setMapcenter]=useState([-37.3159,81.1496])
     const[mapZoom,setMapZoom]=useState(3);
-    let lat=45.4;
-    let lng=-75.7;
-    console.log(isNaN(geo?.lat) ,isNaN(geo?.lng))
-    if(!isNaN(geo?.lat) && !isNaN(geo?.lng) ){
-       
-        lat=geo?.lat;
-        lng=geo?.lng
-    }
+   const lat=geo?.lat? geo.lat:45.4;
+   const lng=geo?.lat? geo.lng:-75.7;
     return (
         <div className="map">
-            <LeafletMap center={[lat,lng]} zoom={6}>
+            <LeafletMap center={[lat,lng]} zoom={12}>
                 <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy;<a href="http://osm.org/copyright">OpenstreetMap<a/>contributors'
